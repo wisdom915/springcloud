@@ -6,9 +6,18 @@ spring:
     name: config-server
   profiles:
     active: native
+  #git从读取配置文件
+  config:
+    server:
+      git:
+        uri: https://github.com/wisdom915/springcloud.git    # 配置git仓库的地址
+        search-paths: config-repo                             # git仓库地址下的相对地址，可以配置多个，用,分割。
+        username: 1164760152@qq.com
+        password: Wz103617
+    label: master
   #config-server从本地读取配置文件
-  cloud:
-    config:
-      server:
-        native:
-          search-locations: classpath:/shared
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          search-locations: classpath:/shared

@@ -1,12 +1,7 @@
-server:
-  port: 8769
-
 spring:
-  application:
-    name: config-client
-  profiles:
-    active: pro
   cloud:
     config:
+      name: application #这里对应git上的config-repo配置文件
       uri: http://localhost:8768
-      fail-fast: true
+      profile: dev
+      label: master
