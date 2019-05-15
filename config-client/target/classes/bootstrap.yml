@@ -1,0 +1,12 @@
+server:
+  port: 8769
+
+spring:
+  application:
+    name: config-client
+  profiles:
+    active: pro
+  cloud:
+    config:
+      uri: http://localhost:8768
+      fail-fast: true

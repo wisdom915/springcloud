@@ -1,0 +1,12 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: 127.0.0.1 #设置当前实例的主机名称
+    prefer-ip-address: true
+  client:
+    registerWithEureka: false    #防止自己注册自己 registerWithEureka和fetchRegistry改成false
+    fetchRegistry: false #是否从Eureka服务端获取注册信息 默认true
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #注册中心地址
