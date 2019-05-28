@@ -6,36 +6,44 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="config-client" />
-        <module name="config-server" />
+        <module name="cloud-config" />
+        <module name="cloud-feign" />
+        <module name="cloud-gateway" />
+        <module name="cloud-ribbon" />
+        <module name="cloud-sleuth" />
+        <module name="cloud-turbine" />
+        <module name="cloud-zuul" />
         <module name="eureka-client-8762" />
         <module name="eureka-client-8763" />
         <module name="eureka-client-8764" />
         <module name="eureka-server" />
-        <module name="service-feign" />
-        <module name="service-ribbon" />
-        <module name="service-turbine" />
-        <module name="service-zuul" />
+        <module name="service-auth" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="config-client" target="1.8" />
       <module name="eureka-client-8762 (1)" target="1.8" />
+      <module name="service-bussiness" target="1.8" />
       <module name="springcloudeurekaserver" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-config" options="-parameters" />
+      <module name="cloud-feign" options="-parameters" />
+      <module name="cloud-gateway" options="-parameters" />
+      <module name="cloud-ribbon" options="-parameters" />
+      <module name="cloud-sleuth" options="-parameters" />
+      <module name="cloud-turbine" options="-parameters" />
+      <module name="cloud-zuul" options="-parameters" />
       <module name="config-client" options="-parameters" />
-      <module name="config-server" options="-parameters" />
       <module name="eureka-client-8762" options="-parameters" />
       <module name="eureka-client-8762 (1)" options="-parameters" />
       <module name="eureka-client-8763" options="-parameters" />
       <module name="eureka-client-8764" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
-      <module name="service-feign" options="-parameters" />
-      <module name="service-ribbon" options="-parameters" />
-      <module name="service-turbine" options="-parameters" />
-      <module name="service-zuul" options="-parameters" />
+      <module name="service-auth" options="-parameters" />
+      <module name="service-bussiness" options="-parameters" />
       <module name="springcloudeurekaserver" options="-parameters" />
     </option>
   </component>

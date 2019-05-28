@@ -1,0 +1,40 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: service-auth
+  profiles:
+    active: dev
+  cloud:
+    config:
+      name: service-auth #本地的config的配置文件名  完整配置名由spring.application.name和spring.profiles.active和“-”组成
+      profile: dev
+      uri: http://localhost:8768
+      fail-fast: true
+      discovery:
+        enabled: true
+        service-id: cloud-config
+    #开启消息跟踪
+    bus:
+      trace:
+        enabled: true
+    profiles:
+      active: dev
+    #配置rabbitmq springcloud-bus采用的消息代理有RabbitMQ、AMQP、Kafka
+    rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
+
+  #刷新时，关闭安全验证
+  management:
+    security:
+      enabled: false
+
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/

@@ -1,7 +1,0 @@
-spring:
-  cloud:
-    config:
-      name: application #这里对应git上的config-repo配置文件
-      profile: dev
-      uri: http://localhost:8768
-      label: master

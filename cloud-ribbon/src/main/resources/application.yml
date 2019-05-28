@@ -1,0 +1,18 @@
+server:
+  port: 8765
+spring:
+  application:
+    name: cloud-ribbon
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+#hystrix-dashboard 监控路径
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+

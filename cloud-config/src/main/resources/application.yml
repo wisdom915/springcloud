@@ -1,0 +1,29 @@
+server:
+  port: 8768
+
+spring:
+  application:
+    name: cloud-config
+  #git从读取配置文件
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/wisdom915/springcloud.git    # 配置git仓库的地址
+#          search-paths: config-repo                             # git仓库地址下的相对地址，可以配置多个，用,分割。
+#          username: 1164760152@qq.com
+#          password: Wz103617
+#      label: master
+  #cloud-config从本地读取配置文件
+  profiles:
+    active: native #默认从应用的src/main/resource目录下检索配置文件
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/

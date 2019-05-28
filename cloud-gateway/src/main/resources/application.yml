@@ -1,0 +1,33 @@
+server:
+  port: 8771
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: add_request_parameter_route
+          uri: lb://eureka-client
+          filters:
+            - AddRequestParameter=foo, bar
+          predicates:
+            - Method=GET
+#      routes:
+#        - id: auth_route
+#          uri: http://www.ityouknow.com
+#          predicates:
+#            - Path=/gateway
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+
+logging:
+  level:
+    org.springframework.cloud.gateway: debug

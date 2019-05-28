@@ -20,8 +20,8 @@ public class EurekaClientApplication8763 {
     private String port;
 
     @GetMapping("hi")
-    public String HiController(){
-        return "hi 我来自EurekaClient的 port "+port;
+    public String HiController(String foo){
+        return "hi 我来自EurekaClient的 port "+port+"参数foo!!!  "+ foo;
     }
 
 }

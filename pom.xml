@@ -27,12 +27,14 @@
         <module>eureka-client-8763</module>
         <module>eureka-client-8764</module>
         <module>eureka-server</module>
-        <module>service-ribbon</module>
-        <module>service-feign</module>
-        <module>service-zuul</module>
-        <module>service-turbine</module>
-        <module>config-server</module>
-        <module>config-client</module>
+        <module>cloud-ribbon</module>
+        <module>cloud-feign</module>
+        <module>cloud-zuul</module>
+        <module>cloud-turbine</module>
+        <module>cloud-gateway</module>
+        <module>cloud-config</module>
+        <module>service-auth</module>
+        <module>cloud-sleuth</module>
     </modules>
 
     <dependencyManagement>
