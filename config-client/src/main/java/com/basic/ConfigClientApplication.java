@@ -15,7 +15,7 @@ public class ConfigClientApplication {
     }
 
     @Value("${foo}")
-    String foo;
+    private String foo;
 
     @GetMapping("/foo")
     public String foo(){
