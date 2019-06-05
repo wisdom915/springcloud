@@ -5,9 +5,9 @@ spring:
     name: cloud-zuul
   zipkin:
     base-url: http://localhost:9411
-    sleuth:
-      sampler:
-        percentage: 1.0
+  sleuth:
+    sampler:
+      percentage: 1.0
 eureka:
   client:
     serviceUrl:
@@ -24,4 +24,4 @@ zuul:
     feignapi:
       path: /feignapi/**
       serviceId: cloud-feign
-  prefix: /v1
+  #prefix: /v1

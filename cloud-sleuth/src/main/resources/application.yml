@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: cloud-sleuth
+  main:
+    allow-bean-definition-overriding: true
 
 eureka:
   client:
